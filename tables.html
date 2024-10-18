@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="tables.html">Tables</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <header class="header">
+                <h1>Weather Dashboard</h1>
+                <div class="input-group">
+                    <input type="text" id="cityInput" placeholder="Enter city name">
+                    <button id="getWeatherBtn">Get Weather</button>
+                    <button id="locationBtn">Use My Location</button>
+                    <label class="switch">
+                        <input type="checkbox" id="unitToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>°C/°F</span>
+                </div>
+            </header>
+            <section class="weather-section">
+                <div id="weatherInfoContainer">
+                    <!-- Weather data will be dynamically inserted here -->
+                </div>
+            </section>
+            <section class="chatbot-section">
+                <div class="chatbot-container">
+                    <h2>Chatbot</h2>
+                    <div id="chatbox" class="chatbox">
+                        <!-- Chat messages will be inserted here -->
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="userInput" placeholder="Ask me anything...">
+                        <button id="sendMessageBtn">Send</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="tables.js"></script>
+</body>
+</html>

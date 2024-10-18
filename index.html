@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <h2>Weather App</h2>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="tables.html">Tables</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="controls">
+                <input type="text" id="cityInput" placeholder="Enter city">
+                <button id="getWeatherBtn">Get Weather</button>
+                <button id="locationBtn">Use My Location</button>
+                <label class="switch">
+                    <input type="checkbox" id="unitToggle">
+                    <span class="slider"></span>
+                </label>
+                <span>°C/°F</span>
+            </div>
+
+            <div class="weather-info-container">
+                <div id="currentWeather" class="current-weather"></div>
+            </div>
+
+            <div class="chart-row">
+              
+                <div class="chart-container">
+                    <canvas id="currentWeatherChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="forecastChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </div>
+
+            <div class="sorting-buttons">
+                <button id="sortAsc">Sort Ascending</button>
+                <button id="sortDesc">Sort Descending</button>
+                <button id="filterRain">Filter Rain</button>
+                <button id="highestTemp">Highest Temperature</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="chart.js"></script>
+</body>
+</html>
